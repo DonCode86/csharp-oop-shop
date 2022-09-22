@@ -16,4 +16,33 @@ public class Product
         this.price = price;
     }
    
+    public int GetID () 
+        { return ID; }
+
+    public string GetName ()
+        { return name; }
+
+    public string GetDescription ()
+        { return description; }
+
+    public float GetPrice()
+        { return price; }
+
+    public int GetVat() 
+        { return vat; }
+
+    public void SetName (string name)
+        { this.name = name; }
+
+    public void SetDescription (string description)
+        { this.description = description; }
+
+    public void SetPrice (int price)
+        { this.price = price; }
+
+    public void SetVat (int vat) 
+        { this.vat = vat; }
+
+
+
 }

@@ -15,4 +15,9 @@ public class Water : Product
             Console.WriteLine("Hai superato la capacita' massima possibile (1,5l)");
         } 
     }
+
+    public void DrinkIt (float ltToDrink)
+    {
+        capacity -= ltToDrink;
+    }
 }
