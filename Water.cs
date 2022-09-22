@@ -1,10 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
 public class Water : Product
 {
-    public float capacity { get; set; }
+    public double capacity { get; set; }
     private float maxCapacity = 1.5F;
+    public float ph { get; set; }
+    public string source { get; }
 
-    public Water(string newName, string NewDestription,float newPrice, int newVat, float newCapacity) : base(newName, NewDestription, newPrice, newVat)
+    public Water(string newName, string NewDestription,float newPrice, int newVat, double newCapacity) : base(newName, NewDestription, newPrice, newVat)
     {
         if (newCapacity <= this.maxCapacity)
         {
@@ -16,7 +18,7 @@ public class Water : Product
         } 
     }
 
-    public void DrinkIt (float ltToDrink)
+    public void DrinkIt (double ltToDrink)
     {
         capacity -= ltToDrink;
     }
