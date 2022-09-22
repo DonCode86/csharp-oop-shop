@@ -22,4 +22,14 @@ public class Water : Product
     {
         capacity -= ltToDrink;
     }
+
+    public void Fill (float ltToDrink)
+    {
+        capacity += ltToDrink;
+    }
+
+    public void empty ()
+    {
+        capacity = 0;
+    }
 }
