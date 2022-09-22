@@ -5,17 +5,21 @@ public class Product
     private int ID;
     private string name;
     private string description;
-    private float price;
+    private double price;
     private int vat;
 
-    public Product (string name, string description, float price, int vat)
+    public Product (string name, string description, double newPrice, int vat)
     {
         ID = new Random().Next(1, 100);
         this.name = name;
         this.description = description;
-        this.price = price;
+        this.SetPrice(newPrice);
     }
-   
+
+    public Product()
+    {
+    }
+
     public int GetID () 
         { return ID; }
 
@@ -25,7 +29,7 @@ public class Product
     public string GetDescription ()
         { return description; }
 
-    public float GetPrice()
+    public double GetPrice()
         { return price; }
 
     public int GetVat() 
@@ -37,12 +41,10 @@ public class Product
     public void SetDescription (string description)
         { this.description = description; }
 
-    public void SetPrice (int price)
-        { this.price = price; }
+    public void SetPrice (double newPrice)
+        { this.price = (float)newPrice; }
 
     public void SetVat (int vat) 
         { this.vat = vat; }
-
-
 
 }

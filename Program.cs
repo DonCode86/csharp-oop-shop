@@ -26,3 +26,15 @@ using System.Runtime.ConstrainedExecution;
 //Una volta finite più o meno le vostre classi, nel Program.cs, provate a testare un pò i vostri prodotti specializzati, osservando come i metodi della classe generica prodotto e quelli più specifici vengono richiamati e siano disponibili.
 
 Console.WriteLine("Hello, World!");
+
+Product product = new Product();
+
+product.SetName("Frullatore");
+product.SetDescription("Frulla alla massima velocità");
+product.SetPrice(50.00);
+product.SetVat(20);
+
+Console.WriteLine("Il tuo prodotto è: " + product.GetName());
+Console.WriteLine("La descrizione del tuo prodotto è: " + product.GetDescription());
+Console.WriteLine("Il prezzo del prodotto è: " + product.GetPrice());
+Console.WriteLine("L'iva del prodotto è: " + product.GetVat());
