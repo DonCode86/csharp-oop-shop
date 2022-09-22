@@ -6,6 +6,8 @@ public class Water : Product
     public float ph { get; set; }
     public string source { get; }
 
+    private const float gallons = 3.785F; 
+
     public Water(string newName, string NewDestription,float newPrice, int newVat, double newCapacity) : base(newName, NewDestription, newPrice, newVat)
     {
         if (newCapacity <= this.maxCapacity)
@@ -31,5 +33,10 @@ public class Water : Product
     public void empty ()
     {
         capacity = 0;
+    }
+
+    public static float FromLtToGallons(float capacity)
+    {
+        return capacity * gallons;
     }
 }
