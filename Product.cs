@@ -8,7 +8,7 @@ public class Product
     private float price;
     private int vat;
 
-    public Product (string name, string description, float price)
+    public Product (string name, string description, float price, int vat)
     {
         ID = new Random().Next(1, 100);
         this.name = name;

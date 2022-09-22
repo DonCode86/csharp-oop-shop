@@ -4,7 +4,7 @@ public class Water : Product
     public float capacity { get; set; }
     private float maxCapacity = 1.5F;
 
-    public Water(string newName, string NewDestription,float newPrice, int newVat, float newCapacity) : base(newName, NewDestription, newPrice)
+    public Water(string newName, string NewDestription,float newPrice, int newVat, float newCapacity) : base(newName, NewDestription, newPrice, newVat)
     {
         if (newCapacity <= this.maxCapacity)
         {
